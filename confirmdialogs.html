@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  
+ <head>
+ 	<title>ICD Conversion Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+    <script src="https://app.divshot.com/js/jquery.min.js"></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+    
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<!--<script src="js/jqm.autoComplete-1.5.2-min.js"></script>-->
+		<script src="js/jqm.autoComplete-1.5.2.js"></script>
+		<link rel="stylesheet" href="styles.css">
+
+<!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+		<script>
+		$("ol li").click(function () {
+          // this is the dom element clicked
+          var yolo = $(this).index();
+          
+          console.log(yolo);
+        });
+
+		</script>
+		<h3>ICD Record</h3>
+					<ol id="patient_conditions"data-role="listview" data-split-icon="gear" data-split-theme="d" data-inset="true">
+						<li><a href="#">
+							
+							
+							XXX.XX - XXX.XXXX- XX/XX/XXXX</a>
+							<a href="#edit-condition" data-rel="popup" data-position-to="window" data-transition="pop">Edit Condition</a>
+						</li>
+						<li><a href="#">
+							
+							
+							XXX.XX - XXX.XXXX- XX/XX/XXXX</a>
+							<a href="#edit-condition" data-rel="popup" data-position-to="window" data-transition="pop">Edit Condition</a>
+						</li>
+						<li><a href="#">
+							
+							
+							XXX.XX - XXX.XXXX- XX/XX/XXXX</a>
+							<a href="#edit-condition" data-rel="popup" data-position-to="window" data-transition="pop">Edit Condition</a>
+						</li>
+					</ol>
+		<a href="#delete-confirm" class="btn" data-rel="popup" data-position-to="window" data-transition="pop">Edit Condition</a>
+
+</body>
+	
+	<div data-role="popup" id="edit-condition" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+	    <h3>Change This Record?</h3>
+	    <p>This will permanetly alter this patients Record.</p>
+	   
+	    <a id="delete-soft" href="#delete-confirm" class="btn"   data-rel="popup" data-position-to="window" data-transition="pop" data-icon="delete" >Delete</a>
+		<a href="index.html" data-role="button" data-rel="back" data-theme="a" data-inline="true"  data-mini="true">Cancel</a>
+	</div>
+	<div data-role="popup" id="delete-confirm" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+			    <h3>Delete Record</h3>
+			    <p>Are you sure you want to delete this record?</p>
+			    
+			    <a id="delete-condition-confirmed" href="index.html" data-role="button" data-rel="back" data-inline="true" data-icon="delete" data-mini="true">Yes, Delete it</a>
+				<a href="index.html" data-role="button" data-rel="back" data-theme="a" data-inline="true"  data-mini="true">Cancel</a>
+	</div>
+		<script>
+		/*$("#delete-condition-confirmed").click(function(){
+			selectedPatient.deleteCondition();
+
+			});*/
+		</script>
+</html>
